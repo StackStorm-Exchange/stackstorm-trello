@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0
+
+* Switched from `config.yaml` to `config.schema.yaml`
+
 ## v0.2.0
 
 * Added `TrelloListSensor` which monitors Trello List(s) for new actions/changes

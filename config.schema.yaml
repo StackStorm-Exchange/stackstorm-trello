@@ -1,0 +1,52 @@
+---
+  api_key:
+    description: "User API Key"
+    type: "string"
+    required: true
+  token:
+    description: "User oAuth Token for R/W Access"
+    type: "string"
+    secret: true
+
+  list_actions_sensor:
+    description: "Sensor specific settings"
+    type: "object"
+    required: true
+    additionalProperties: true
+    properties:
+      api_key:
+        description: "Sensor-specific API Key"
+        type: "string"
+      token:
+        description: "Sensor-specific oAuth Token"
+        type: "string"
+        secret: true
+      lists:
+        description: "Lists to monitor"
+        type: "array"
+        items:
+          type: "object"
+          required: true
+          properties:
+            list_id:
+              description: "Trello List ID"
+              type: "string"
+              required: true
+            board_id:
+              description: "Board ID where list is located"
+              type: "string"
+              required: true
+            api_key:
+              description: "Optional List-specific API Key"
+              type: "string"
+              required: false
+            token:
+              description: "Optional List-specific Token"
+              type: "string"
+              required: false
+            filter:
+              filter: "Filter actions by type, e.g. createCard, deleteCard"
+              type: "array"
+              required: false
+              items:
+                type: "string"
