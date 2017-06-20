@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.4.0
+
+- Updated action `runner_type` from `run-python` to `python-script`
+
 ## v0.3.0
 
 * Switched from `config.yaml` to `config.schema.yaml`

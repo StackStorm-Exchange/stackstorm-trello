@@ -1,6 +1,6 @@
 ---
 name: add_list
-runner_type: "run-python"
+runner_type: "python-script"
 description: Add a new list to a board
 enabled: true
 entry_point: "add_list.py"

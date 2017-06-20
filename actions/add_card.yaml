@@ -1,6 +1,6 @@
 ---
 name: add_card
-runner_type: "run-python"
+runner_type: "python-script"
 description: Add a new card to a list
 enabled: true
 entry_point: "add_card.py"

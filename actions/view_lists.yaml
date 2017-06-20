@@ -1,6 +1,6 @@
 ---
 name: view_lists
-runner_type: "run-python"
+runner_type: "python-script"
 description: View all lists belonging to a board
 enabled: true
 entry_point: "view_lists.py"

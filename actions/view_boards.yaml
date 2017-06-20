@@ -1,6 +1,6 @@
 ---
 name: view_boards
-runner_type: "run-python"
+runner_type: "python-script"
 description: Return a dictionary of all boards and their IDs
 enabled: true
 entry_point: "view_boards.py"

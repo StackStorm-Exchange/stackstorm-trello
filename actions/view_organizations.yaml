@@ -1,6 +1,6 @@
 ---
 name: view_organizations
-runner_type: "run-python"
+runner_type: "python-script"
 description: List all organizations for user
 enabled: true
 entry_point: "view_organizations.py"
