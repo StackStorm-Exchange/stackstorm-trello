@@ -7,6 +7,10 @@ Integration pack that provides support for Trello, an online Task Tracking tool
 Copy the example configuration in [trello.yaml.example](./trello.yaml.example)
 to `/opt/stackstorm/configs/trello.yaml` and edit as required.
 
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
 ### Action Configuration
 
 For actions, the configuration should contain:

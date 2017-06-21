@@ -1,6 +1,6 @@
 ---
 name: close_list
-runner_type: "run-python"
+runner_type: "python-script"
 description: Close a list belonging to a board
 enabled: true
 entry_point: "close_list.py"
