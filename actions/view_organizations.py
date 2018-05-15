@@ -7,7 +7,7 @@ class ViewOrganizationsAction(action.BaseAction):
             self._set_creds(api_key=api_key, token=token)
 
         orgs = {}
-        for org in self._client.list_organizations():
+        for org in self._client().list_organizations():
             orgs[org.id] = org.name
 
         return orgs

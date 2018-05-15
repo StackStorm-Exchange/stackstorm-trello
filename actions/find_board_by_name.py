@@ -7,7 +7,7 @@ class FindBoardByNameAction(action.BaseAction):
             self._set_creds(api_key=api_key, token=token)
 
         boards = []
-        for board in self._client.list_boards():
+        for board in self._client().list_boards():
             if board.name == name and not board.closed:
                 boards.append(board.id)
 

@@ -46,21 +46,21 @@ class TrelloListSensor(PollingSensor):
         for trello_list_config in self._lists:
             self._update_credentials_by_precedence(trello_list_config)
 
-            l = TrelloList(**trello_list_config)
+            trello_list = TrelloList(**trello_list_config)
             self._logger.debug("[TrelloListSensor]: Processing queue for Trello list: '%s'"
-                           % l.list_id)
+                               % trello_list.list_id)
 
-            actions = l.fetch_actions(
+            actions = trello_list.fetch_actions(
                 filter=trello_list_config.get('filter') or None,
-                since=self._sensor_service.get_value(l.key_name)
+                since=self._sensor_service.get_value(trello_list.key_name)
             )
 
             for action in reversed(actions):
                 self._logger.debug("[TrelloListSensor]: Found new action for Trello list: '%r'"
-                           % action)
+                                   % action)
                 self._sensor_service.dispatch(trigger=self.TRIGGER, payload=action)
                 if is_date(action.get('date')):
-                    self._sensor_service.set_value(l.key_name, action.get('date'))
+                    self._sensor_service.set_value(trello_list.key_name, action.get('date'))
 
     def _update_credentials_by_precedence(self, trello_list_config):
         """
