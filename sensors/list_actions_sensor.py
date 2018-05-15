@@ -48,7 +48,7 @@ class TrelloListSensor(PollingSensor):
 
             trello_list = TrelloList(**trello_list_config)
             self._logger.debug("[TrelloListSensor]: Processing queue for Trello list: '%s'"
-                           % trello_list.list_id)
+                               % trello_list.list_id)
 
             actions = trello_list.fetch_actions(
                 filter=trello_list_config.get('filter') or None,
@@ -57,7 +57,7 @@ class TrelloListSensor(PollingSensor):
 
             for action in reversed(actions):
                 self._logger.debug("[TrelloListSensor]: Found new action for Trello list: '%r'"
-                           % action)
+                                   % action)
                 self._sensor_service.dispatch(trigger=self.TRIGGER, payload=action)
                 if is_date(action.get('date')):
                     self._sensor_service.set_value(trello_list.key_name, action.get('date'))
