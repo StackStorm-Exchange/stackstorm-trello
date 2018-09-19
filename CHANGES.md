@@ -1,5 +1,9 @@
 # Changelog
 
+# 0.4.3
+
+- Add ability to change a board in move_card action ([issue #6](https://github.com/StackStorm-Exchange/stackstorm-trello/issues/6))
+
 # 0.4.2
 
 - Minor linting
