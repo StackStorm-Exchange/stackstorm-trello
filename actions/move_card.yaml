@@ -13,6 +13,10 @@ parameters:
     type: string
     description: Target List ID to move a card to
     required: true
+  target_board_id:
+    type: string
+    description: Target Board ID of list to move a card to
+    required: false
   api_key:
     type: string
     description: User API Key overriding the system key
