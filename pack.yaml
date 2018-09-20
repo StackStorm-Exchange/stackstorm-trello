@@ -2,7 +2,7 @@
 ref: trello
 name: trello
 description: Trello Web-based Project Management
-version: 0.4.2
+version: 0.4.3
 author: James Fryman
 email: james@stackstorm.com
 keywords:
