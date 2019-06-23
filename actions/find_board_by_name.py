@@ -11,7 +11,7 @@ class FindBoardByNameAction(action.BaseAction):
             if board.name == name and not board.closed:
                 boards.append(board.id)
 
-        if len(boards) == 0:
+        if not boards:
             return False
-        else:
-            return boards
+
+        return boards

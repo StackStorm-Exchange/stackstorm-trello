@@ -7,6 +7,6 @@ class CloseCardAction(action.BaseAction):
             self._set_creds(api_key=api_key, token=token)
 
         card = self._client().get_card(card_id)
-        card.set_closed()
+        card.set_closed(closed=True)
 
         return card.closed
