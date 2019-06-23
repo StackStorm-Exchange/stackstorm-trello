@@ -12,7 +12,7 @@ class FindListByNameAction(action.BaseAction):
             if lst.name == name and not lst.closed:
                 lists.append(lst.id)
 
-        if len(lists) == 0:
+        if not lists:
             return False
-        else:
-            return lists
+
+        return lists

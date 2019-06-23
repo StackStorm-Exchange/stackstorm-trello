@@ -14,7 +14,7 @@ class FindCardByNameAction(action.BaseAction):
             if card.name == name and not card.closed:
                 cards.append(card.id)
 
-        if len(cards) == 0:
+        if not cards:
             return False
-        else:
-            return cards
+
+        return cards
