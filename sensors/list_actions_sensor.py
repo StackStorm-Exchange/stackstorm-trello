@@ -1,4 +1,6 @@
 import dateutil.parser
+import six
+
 from trello import TrelloClient
 from st2reactor.sensor.base import PollingSensor
 
@@ -147,18 +149,18 @@ class TrelloList(object):
         """
         if not self.api_key:
             raise ValueError('[TrelloListSensor] "api_key" config value is required!')
-        assert isinstance(self.api_key, basestring)
+        assert isinstance(self.api_key, six.string_types)
 
         if self.token:
-            assert isinstance(self.token, basestring)
+            assert isinstance(self.token, six.string_types)
 
         if not self.board_id:
             raise ValueError('[TrelloListSensor]: "board_id" config value is required!')
-        assert isinstance(self.board_id, basestring)
+        assert isinstance(self.board_id, six.string_types)
 
         if not self.list_id:
             raise ValueError('[TrelloListSensor]: "list_id" config value is required!')
-        assert isinstance(self.list_id, basestring)
+        assert isinstance(self.list_id, six.string_types)
 
     @property
     def key_name(self):
