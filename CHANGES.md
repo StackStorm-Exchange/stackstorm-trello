@@ -1,5 +1,10 @@
 # Changelog
 
+# 0.4.5
+
+- Python 3 fixups
+- Add explicit support for Python 2 and 3
+
 # 0.4.4
 
 - Minor linting fixes
