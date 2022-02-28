@@ -9,7 +9,7 @@ class FindListByNameAction(action.BaseAction):
         lists = []
         board = self._client().get_board(board_id)
         for lst in board.all_lists():
-            if lst.name == name and not lst.closed:
+            if lst.name.decode() == name and not lst.closed:
                 lists.append(lst.id)
 
         if not lists:

@@ -1,0 +1,21 @@
+---
+name: unassign_card
+runner_type: "python-script"
+description: Unassign a member from a card
+enabled: true
+entry_point: "unassign_card.py"
+parameters:
+  card_id:
+    type: string
+    description: The ID of the card to unassign the member from
+    required: true
+  member_id:
+    type: string
+    description: The ID of the member to unassign from the card
+    required: true
+  api_key:
+    type: string
+    description: User API Key overriding the system key
+  token:
+    type: string
+    description: User oAuth Token overriding the system key

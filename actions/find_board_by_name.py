@@ -8,7 +8,7 @@ class FindBoardByNameAction(action.BaseAction):
 
         boards = []
         for board in self._client().list_boards():
-            if board.name == name and not board.closed:
+            if board.name.decode() == name and not board.closed:
                 boards.append(board.id)
 
         if not boards:
