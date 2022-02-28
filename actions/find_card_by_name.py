@@ -11,7 +11,7 @@ class FindCardByNameAction(action.BaseAction):
         lst = board.get_list(list_id)
 
         for card in lst.list_cards():
-            if card.name == name and not card.closed:
+            if card.name.decode() == name and not card.closed:
                 cards.append(card.id)
 
         if not cards:

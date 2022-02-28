@@ -1,5 +1,14 @@
 # Changelog
 
+# 1.1.0
+
+* Added the `add_card_comment` action to add a comment to an existing card
+* Added the `add_card_label` action to add a label to an existing card
+* Added the `assign_card` action to assign a card to a member of the trello board
+* Added the `find_label_by_name` action to find a label's id by name
+* Added the `unassign_card` action to unassign a board member from a card
+* Updated the existing find by name (`find_board_by_name`, `find_card_by_name`, and `find_list_by_name`) actions to correctly return the object's name as a string and not a byte to enable proper string comparison.
+
 # 1.0.0
 
 * Drop Python 2.7 support
